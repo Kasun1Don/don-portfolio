@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Benefits of Bun (Fast JS runtime)
+
+Cold Starts: Bun's JavaScriptCore engine starts faster than Node's V8, leading to quicker dev server boots.
+
+Hot Reloading: Changes in your code often feel "instant" because Bun handles TypeScript and JSX natively without a separate transpilation step.
+
+Native TypeScript Support: You can execute .ts and .tsx files directly without needing ts-node or complex build pipelines. Fast bundler.
+
+Fast package manager replaces npm
+
