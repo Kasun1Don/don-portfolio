@@ -23,6 +23,11 @@
 # misc
 .DS_Store
 *.pem
+.claude
+/kstack-audit.md
+/references.md
+/standards.md
+/CLAUDE.md
 
 # debug
 npm-debug.log*

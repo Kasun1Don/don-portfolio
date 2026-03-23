@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+commit_msg=$(cat "$1")
+
+# Enforce: fix: | feat: | chore: prefix, under 50 chars
+if ! echo "$commit_msg" | grep -qE '^(fix|feat|chore|refactor|docs): .{1,43}$'; then
+  echo "❌ Commit message must start with fix:, feat:, chore:, refactor:, or docs: and be under 50 chars total"
+  echo "   Got: $commit_msg"
+  exit 1
+fi

@@ -1,0 +1,10 @@
+dist/
+build/
+out/
+.turbo/
+.nitro/
+.output/
+storybook-static/
+coverage/
+!.env.project
+!.env.vault
