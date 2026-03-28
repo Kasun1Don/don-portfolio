@@ -15,7 +15,7 @@ const stats = [
     value: "2015",
     label: "First personal website",
     description:
-      "Interest for building on the web started with basic html and css a decade ago, in high school",
+      "Interest in building on the web started with basic html and css a decade ago, in high school",
   },
   {
     value: "1.26B+",
