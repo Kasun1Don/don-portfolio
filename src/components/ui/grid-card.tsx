@@ -21,12 +21,12 @@ interface GridCardProps {
 export function GridCard({ delay = 0, className, children }: GridCardProps) {
   return (
     <motion.div
-      className={cn("w-full rounded-xl md:h-full", className)}
+      className={cn("w-full rounded-xl md:h-full md:min-h-0", className)}
       initial={ENTRANCE_INITIAL}
       animate={ENTRANCE_ANIMATE}
       transition={{ ...ENTRANCE_SPRING, delay }}
     >
-      <Card className="h-full w-full">{children}</Card>
+      <Card className="h-full min-h-0 w-full gap-0">{children}</Card>
     </motion.div>
   );
 }
