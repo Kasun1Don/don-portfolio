@@ -50,7 +50,7 @@ export function ExpandableCard({
           className,
         )}
       >
-        <div onClick={onToggle} className="h-full w-full">
+        <div onClick={onToggle} className="flex min-h-0 flex-1 flex-col">
           {children}
         </div>
         <p
