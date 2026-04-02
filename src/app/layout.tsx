@@ -31,7 +31,7 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" forcedTheme="dark">
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
