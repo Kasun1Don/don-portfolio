@@ -24,7 +24,16 @@ export function ParticleLinks() {
     <Particles
       id="tsparticles"
       className="pointer-events-none absolute inset-0 z-0"
-      options={{ preset: "links" }}
+      options={{
+        preset: "links",
+        particles: {
+          number: {
+            density: {
+              enable: true,
+            },
+          },
+        },
+      }}
     />
   );
 }
