@@ -35,33 +35,33 @@ export function ExpandableCard({
         )}
         onClick={onClose}
       />
-
-      {/* Expandable Grid Card */}
-      <GridCard
-        delay={delay}
-        className={cn(
-          "relative cursor-pointer transition-[height,width] duration-300",
-          isOpen
-            ? cn("z-20", whenOpen)
-            : cn(
-                "md:hover:bg-accent md:hover:m-1 md:hover:shadow-lg",
-                whenClosed,
-              ),
-          className,
-        )}
-      >
-        <div onClick={onToggle} className="flex min-h-0 flex-1 flex-col">
-          {children}
-        </div>
-        <p
+      {/* Expandable Card overflows the grid cell */}
+      <div className={className}>
+        <GridCard
+          delay={delay}
           className={cn(
-            "text-muted-foreground absolute right-0 bottom-2 left-0 hidden text-center text-xs transition-opacity duration-300 md:block",
-            isOpen ? "opacity-0" : "opacity-60",
+            "relative cursor-pointer transition-[height,width] duration-300",
+            isOpen
+              ? ["z-20", whenOpen]
+              : [
+                  "md:hover:bg-accent md:hover:m-1 md:hover:shadow-lg",
+                  whenClosed,
+                ],
           )}
         >
-          Click to see more
-        </p>
-      </GridCard>
+          <div onClick={onToggle} className="flex min-h-0 flex-1 flex-col">
+            {children}
+          </div>
+          <p
+            className={cn(
+              "text-muted-foreground absolute right-0 bottom-2 left-0 hidden text-center text-xs transition-opacity duration-300 md:block",
+              isOpen ? "opacity-0" : "opacity-60",
+            )}
+          >
+            Click to see more
+          </p>
+        </GridCard>
+      </div>
     </>
   );
 }
