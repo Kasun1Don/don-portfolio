@@ -53,7 +53,7 @@ const projects: Project[] = [
   {
     title: "Hika Design",
     description:
-      "Freelance design studio delivering brand identity, UI/UX, and digital assets for clients across various industries.",
+      "A professional services website for Hika Design Services Pty Ltd, an overhead power line engineering consultancy. Built with Next.js, React, Typescript, Tailwind and Resend for email, deployed on Vercel.",
     image: "/hika_design.png",
     url: "https://hikadesign.com",
   },
@@ -71,7 +71,7 @@ export function ProjectsCard() {
 
       <CardContent
         className={cn(
-          "flex h-full gap-4 overflow-auto transition-all duration-300",
+          "flex h-full gap-4 overflow-auto pb-6 transition-all duration-300",
           isOpen ? "flex-col" : "flex-col md:flex-row",
         )}
       >
