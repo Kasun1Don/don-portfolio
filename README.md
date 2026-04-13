@@ -1,48 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal portfolio website 2026. The goal here was to create something I can easily update/maintain over time.
 
-## Getting Started
+## Building for agents
 
-First, run the development server:
+llms.txt context file to give AI tools (e.g. Agents) direct access to the content
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Benefits of Bun (Fast JS runtime)
+## Discovering the Benefits of Bun
 
 Cold Starts: Bun's JavaScriptCore engine starts faster than Node's V8, leading to quicker dev server boots.
 
-Hot Reloading: Changes in your code often feel "instant" because Bun handles TypeScript and JSX natively without a separate transpilation step.
+Hot Reloading: Changes in code often feel instant because Bun handles TypeScript and JSX natively without a separate transpilation step.
 
-Native TypeScript Support: You can execute .ts and .tsx files directly without needing ts-node or complex build pipelines. Fast bundler.
+Native TypeScript Support: Can execute .ts and .tsx files directly without needing ts-node or complex build pipelines. Fast bundler.
 
-Fast package manager replaces npm
+Fast bun package manager replaces npm
 
-BetterStack: https://www.youtube.com/shorts/BPM8tKmPCec 
+Throughput: handles approximately 52,000 HTTP requests per second, nearly four times the 13,000 requests per second managed by Node
+
+Efficiency: It uses about 30% less memory (65MB compared to Node's 95MB)
