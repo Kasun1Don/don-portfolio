@@ -20,7 +20,7 @@ export function WorkingOnCard() {
           className="rounded-xl object-cover"
         />
         <p className="text-muted-foreground text-sm">
-          Inspired by Moltbook, building for agents (AX)
+          Inspired by Moltbook, building for agents (AX - Agent Experience)
         </p>
       </CardContent>
     </>
