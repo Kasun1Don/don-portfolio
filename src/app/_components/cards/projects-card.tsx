@@ -131,7 +131,9 @@ function ProjectImage({
   isOpen: boolean;
 }) {
   const img = (
-    <div className={`relative size-[${size}px] shrink-0`}>
+    <div
+      className={`relative size-[${size}px] shrink-0 transition-all duration-100 group-hover:scale-[0.9]`}
+    >
       <Image
         src={image}
         alt={title}
@@ -151,7 +153,7 @@ function ProjectImage({
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => e.stopPropagation()}
-      className="group shrink-0 transition-all duration-100 hover:scale-[0.9]"
+      className="shrink-0"
       aria-label={`Open ${title}`}
     >
       {img}
@@ -166,10 +168,20 @@ function ProjectItem({
   url,
   isOpen,
 }: Project & { isOpen: boolean }) {
+  const handleRowClick = url
+    ? () => window.open(url, "_blank", "noopener,noreferrer")
+    : undefined;
+
   return (
     <>
       {/* Mobile: always show full layout */}
-      <div className="flex items-center gap-4 rounded-2xl md:hidden">
+      <div
+        className={cn(
+          "group flex items-center gap-4 rounded-2xl md:hidden",
+          url && "cursor-pointer",
+        )}
+        onClick={handleRowClick}
+      >
         <ProjectImage
           url={url}
           image={image}
@@ -186,7 +198,13 @@ function ProjectItem({
       {/* Desktop: image only when collapsed, full layout when open */}
       <div className="hidden md:block">
         {isOpen ? (
-          <div className="flex items-center gap-4 rounded-2xl">
+          <div
+            className={cn(
+              "group flex items-center gap-4 rounded-2xl",
+              url && "cursor-pointer",
+            )}
+            onClick={handleRowClick}
+          >
             <ProjectImage
               url={url}
               image={image}
@@ -200,13 +218,15 @@ function ProjectItem({
             </div>
           </div>
         ) : (
-          <ProjectImage
-            url={url}
-            image={image}
-            title={title}
-            size={110}
-            isOpen={isOpen}
-          />
+          <div className="group">
+            <ProjectImage
+              url={url}
+              image={image}
+              title={title}
+              size={110}
+              isOpen={isOpen}
+            />
+          </div>
         )}
       </div>
     </>
