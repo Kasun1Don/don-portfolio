@@ -49,7 +49,7 @@ export function SkillsCard() {
         <Code2 className="text-muted-foreground h-4 w-4" />
       </CardHeader>
 
-      <CardContent className="flex min-h-0 flex-1 flex-col gap-2 overflow-scroll md:mb-6">
+      <CardContent className="flex min-h-0 flex-1 flex-col gap-2 overflow-scroll pb-4 md:mb-6">
         <p className="text-muted-foreground text-xs">Languages</p>
         <div className="flex flex-wrap gap-2">
           <IconList icons={languages} size={24} />

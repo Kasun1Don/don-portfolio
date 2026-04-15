@@ -38,7 +38,7 @@ export function MyPortfolioCard() {
         <Code className="text-muted-foreground h-4 w-4" />
       </CardHeader>
 
-      <CardContent className="flex h-full flex-col">
+      <CardContent className="flex h-full flex-col pb-4">
         <CardDescription className="line-clamp-2">
           Built with Next.js, React, Tailwind CSS, and shadcn/ui, using Bun
         </CardDescription>

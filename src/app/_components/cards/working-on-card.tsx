@@ -11,7 +11,7 @@ export function WorkingOnCard() {
         <ChartNoAxesGantt className="text-muted-foreground h-4 w-4" />
       </CardHeader>
 
-      <CardContent className="flex flex-col items-center justify-center gap-2">
+      <CardContent className="flex flex-col items-center justify-center gap-2 pb-4">
         <Image
           src="/neopoker.png"
           alt="NeoPoker"
