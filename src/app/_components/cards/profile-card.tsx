@@ -20,7 +20,6 @@ const badges = [
   "Crypto Exchange Developer (10k+ users)",
 ];
 
-/** Card header + content only; parent supplies the shell (e.g. GridCard). */
 export function ProfileCard() {
   return (
     <>
@@ -76,14 +75,14 @@ export function ProfileCard() {
               </p>
               <p>
                 I value focusing on user experience and increasingly agent
-                experience when shipping new features. I also think deeply about
-                optimising the developer experience as our AI native workflows
-                evolve.
+                experience when shipping new features. I also thinking more
+                about optimising our developer experience as our AI native
+                workflows evolve.
               </p>
               <p className="hidden md:block">
-                I love embracing new AI tools, experimenting with them and
-                sharing what I learn with colleagues and the broader developer
-                community through meetups etc.
+                Love embracing new AI tools, experimenting with them and sharing
+                what I learn with colleagues and the broader developer community
+                through meetups etc.
               </p>
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
