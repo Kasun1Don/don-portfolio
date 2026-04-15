@@ -7,12 +7,7 @@ import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCardExpansion } from "@/hooks/use-card-expansion";
 import { cn } from "@/lib/utils";
 
-interface Subject {
-  name: string;
-  grade: string;
-}
-
-const subjects: Subject[] = [
+const subjects = [
   { name: "Database Design and Development", grade: "HD" },
   { name: "Fundamental Programming", grade: "HD" },
   { name: "Applied Computation", grade: "HD" },
@@ -55,6 +50,9 @@ export function EducationCard() {
           })}
         >
           {subjects.map((s) => s.name + " (" + s.grade + ")").join(", ")}
+          <span className="mt-3 block">
+            HD = High Distinction, D = Distinction.
+          </span>
         </p>
       </CardContent>
     </>
