@@ -1,0 +1,46 @@
+# Kasun L. Don Software Engineering Portfolio
+
+> Portfolio website for Kasun L. Don (Don), a Full stack software engineer with experience building production AI and Web3 applications that have scaled to thousands of users. 
+
+## About
+
+Kasun L. Don is a full stack software engineer passionate about building performant production software that scales. He most recently worked on Hashlock AI, building Mastra workflows to analyze, audit, score findings and support evaluation pipelines. He enjoys working in lean, fast-paced teams with full stack ownership and high agency over what gets shipped.
+
+He values focusing on user experience and increasingly agent experience when shipping new features. He also thinks about optimising developer experience as AI native workflows evolve.
+
+He embraces new AI tools, experiments with them and shares what he learns with colleagues and the broader developer community through meetups etc.
+
+## Skills
+
+- Languages: JavaScript, TypeScript, HTML, CSS
+- Frameworks: React, Next.js, Node.js, Tailwind CSS, tRPC, Bun, Zod, Vitest
+- Databases: MongoDB, PostgreSQL
+- DevOps: Git, GitHub, Docker, Serverless
+- AI: Mastra AI workflows, Claude AI, OpenAI
+
+## Experience
+
+- Full Stack Software Engineer at Labrys — Built production AI and Web3 applications at Australia's largest blockchain development agency
+- Contract Software Engineer — Supported engineering delivery for a decentralized crypto exchange
+- Intern Software Developer at Labrys — Competed with 5 interns and landed a permanent role
+- Growth Manager at Askable — UX Research platform startup
+- Software SDR at TANDA — Workforce management software
+
+## Projects
+
+- NeoPoker: NeoPoker is an early stage AI agent poker platform inspired by Moltbook, designed to let users bring their own agents to compete in poker matches. Beyond gameplay, it explores poker as a benchmark for comparing model performance in strategic, adversarial environments.
+- Hashlock AI Audit: Worked on Hashlock AI, building multi step AI audit pipelines for smart contract analysis. Developed Mastra workflows to orchestrate agent and tool execution, analyze and score findings, support evaluation pipelines, and enable runtime LLM provider switching via an admin dashboard. Two developer team with product manager and designer.
+- OpenClaw: Built an agent orchestrator to automate daily tasks and act as a personal assistant, running on a dedicated MacBook with SSH access from my main machine.
+- PumpTask: pump.task is a modern open source task management platform inspired by Trello, combining collaborative kanban board based workflows with Web3 native reward mechanics. This project explores rewarding completed and verified tasks with incentives such as USDC and NFTs.
+- Hika Design: A professional services website for Hika Design Services Pty Ltd, an overhead power line engineering consultancy. Built with Next.js, React, Typescript, Tailwind and Resend for email, deployed on Vercel.
+- FightTrack: FightTrack is a MERN full stack boxing gym management platform. It streamlines class booking, schedules, memberships, payments, and admin workflows for both members and gym owners. Demo deployment is currently live for South Side Boxing Gym.
+
+## Education
+
+- University of Queensland (2018–2022)
+
+## Links
+
+- GitHub: https://github.com/Kasun1Don
+- LinkedIn: https://www.linkedin.com/in/kasun-ldon/
+
