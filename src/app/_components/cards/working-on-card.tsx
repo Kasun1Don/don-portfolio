@@ -7,7 +7,7 @@ export function WorkingOnCard() {
   return (
     <>
       <CardHeader className="flex flex-row items-center justify-between pb-4">
-        <CardTitle className="font-medium">Working On</CardTitle>
+        <CardTitle className="font-medium">Current Side Project</CardTitle>
         <ChartNoAxesGantt className="text-muted-foreground h-4 w-4" />
       </CardHeader>
 
