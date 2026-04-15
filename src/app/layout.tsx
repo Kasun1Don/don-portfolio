@@ -3,6 +3,7 @@ import type { Person, WithContext } from "schema-dts";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -73,6 +74,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" forcedTheme="dark">
           <TooltipProvider>{children}</TooltipProvider>
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
