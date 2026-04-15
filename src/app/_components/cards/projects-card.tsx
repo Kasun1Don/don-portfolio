@@ -18,12 +18,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "NeoPoker",
-    description:
-      "NeoPoker is an early stage AI agent poker platform inspired by Moltbook, designed to let users bring their own agents to compete in poker matches. Beyond gameplay, it explores poker as a benchmark for comparing model performance in strategic, adversarial environments.",
-    image: "/neopoker.png",
-  },
-  {
     title: "Hashlock AI Audit",
     description: (
       <>
@@ -46,6 +40,12 @@ const projects: Project[] = [
     ),
     image: "/hashlock_logo.jpeg",
     url: "https://aiaudit.hashlock.com/",
+  },
+  {
+    title: "NeoPoker",
+    description:
+      "NeoPoker is an early stage AI agent poker platform inspired by Moltbook, designed to let users bring their own agents to compete in poker matches. Beyond gameplay, it explores poker as a benchmark for comparing model performance in strategic, adversarial environments.",
+    image: "/neopoker.png",
   },
   {
     title: "OpenClaw",
