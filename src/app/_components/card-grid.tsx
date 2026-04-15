@@ -23,6 +23,9 @@ export function CardGrid() {
           <ProfileCard />
         </GridCard>
         <GridCard>
+          <StatsCard />
+        </GridCard>
+        <GridCard>
           <WorkingOnCard />
         </GridCard>
         <GridCard>

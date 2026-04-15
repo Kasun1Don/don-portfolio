@@ -36,7 +36,7 @@ export function StatsCard() {
     >
       {stats.map(({ value, label, description }) => (
         <SwiperSlide key={label}>
-          <div className="flex h-full flex-col items-center justify-center gap-4 px-4 pb-6 text-center">
+          <div className="flex h-full flex-col items-center justify-center gap-4 px-4 pt-4 pb-6 text-center md:pt-0">
             <p className="text-2xl font-bold">{value}</p>
             <p className="text-sm font-medium">{label}</p>
             <p className="text-muted-foreground text-xs">{description}</p>
