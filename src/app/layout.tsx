@@ -13,6 +13,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: "Kasun L. Don",
   description: "Kasun L. Don AI software engineer portfolio.",
+  metadataBase: new URL("https://t0ken.dev"),
   openGraph: {
     title: "Kasun L. Don Portfolio",
     description: "Kasun L. Don AI software engineering portfolio.",
