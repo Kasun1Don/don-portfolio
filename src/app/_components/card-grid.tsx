@@ -22,12 +22,24 @@ export function CardGrid() {
         <GridCard>
           <ProfileCard />
         </GridCard>
-        <ExpandableCard cardId="projects">
-          <ProjectsCard />
-        </ExpandableCard>
-        <ExpandableCard cardId="skills">
+        <GridCard>
+          <WorkingOnCard />
+        </GridCard>
+        <GridCard>
           <SkillsCard />
-        </ExpandableCard>
+        </GridCard>
+        <GridCard>
+          <ProjectsCard />
+        </GridCard>
+        <GridCard>
+          <EmploymentCard />
+        </GridCard>
+        <GridCard>
+          <EducationCard />
+        </GridCard>
+        <GridCard>
+          <MyPortfolioCard />
+        </GridCard>
       </div>
 
       {/* Desktop */}
