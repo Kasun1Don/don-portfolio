@@ -1,7 +1,9 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { FolderOpenDot } from "lucide-react";
+import { GitHubLight } from "developer-icons";
 
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCardExpansion } from "@/hooks/use-card-expansion";
@@ -9,53 +11,85 @@ import { cn } from "@/lib/utils";
 
 interface Project {
   title: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
-  url: string;
+  url?: string;
 }
 
 const projects: Project[] = [
   {
     title: "NeoPoker",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "NeoPoker is an early stage AI agent poker platform inspired by Moltbook, designed to let users bring their own agents to compete in poker matches. Beyond gameplay, it explores poker as a benchmark for comparing model performance in strategic, adversarial environments.",
     image: "/neopoker.png",
-    url: "https://neopoker.app",
   },
   {
     title: "Hashlock AI Audit",
-    description:
-      "AI-powered smart contract auditing tool built at Labrys for Hashlock — automating vulnerability detection and security analysis for blockchain applications. Featured on LinkedIn Pulse.",
+    description: (
+      <>
+        Worked on Hashlock AI, building multi step AI audit pipelines for smart
+        contract analysis. Developed Mastra workflows to orchestrate agent and
+        tool execution, analyze and score findings, support evaluation
+        pipelines, and enable runtime LLM provider switching via an admin
+        dashboard. Two developer team with product manager and designer.{" "}
+        <a
+          href="https://linkedin.com/pulse/building-labrys-hashlocks-ai-audit-tool-labrys-io-yu4ne/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="hover:text-foreground underline transition-colors"
+        >
+          Labrys client project case study
+        </a>
+        .
+      </>
+    ),
     image: "/hashlock_logo.jpeg",
-    url: "https://linkedin.com/pulse/building-labrys-hashlocks-ai-audit-tool-labrys-io-yu4ne/",
+    url: "https://aiaudit.hashlock.com/",
   },
   {
     title: "OpenClaw",
     description:
-      "Built an agent orchestrator to automate daily tasks and act as a personal assistant, running on a dedicated MacBook Neo with SSH access from my main machine.",
+      "Built an agent orchestrator to automate daily tasks and act as a personal assistant, running on a dedicated MacBook with SSH access from my main machine.",
     image: "/openclaw_proj.png",
-    url: "https://github.com/kasunl",
   },
   {
     title: "PumpTask",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    description: (
+      <>
+        pump.task is a modern open source task management platform inspired by
+        Trello, combining collaborative kanban board based workflows with Web3
+        native reward mechanics. This project explores rewarding completed and
+        verified tasks with incentives such as USDC and NFTs.{" "}
+        <a
+          href="https://github.com/Kasun1Don/pump.task"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="hover:text-foreground inline-flex items-center gap-1 underline transition-colors"
+        >
+          GitHub repo
+          <GitHubLight size={14} className="shrink-0" />
+        </a>
+        .
+      </>
+    ),
     image: "/pumptaskicon.png",
-    url: "https://pumptask.app",
-  },
-  {
-    title: "FightTrack",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/fighttrackicon.png",
-    url: "https://fighttrack.app",
+    url: "https://pump-task.vercel.app/",
   },
   {
     title: "Hika Design",
     description:
       "A professional services website for Hika Design Services Pty Ltd, an overhead power line engineering consultancy. Built with Next.js, React, Typescript, Tailwind and Resend for email, deployed on Vercel.",
     image: "/hika_design.png",
-    url: "https://hikadesign.com",
+    url: "https://www.hikadesign.com.au",
+  },
+  {
+    title: "FightTrack",
+    description:
+      "FightTrack is a MERN full stack boxing gym management platform. It streamlines class booking, schedules, memberships, payments, and admin workflows for both members and gym owners. Demo deployment is currently live for South Side Boxing Gym.",
+    image: "/fighttrackicon.png",
+    url: "https://fight-track.vercel.app/",
   },
 ];
 
@@ -83,58 +117,33 @@ export function ProjectsCard() {
   );
 }
 
-function ProjectItem({
-  title,
-  description,
-  image,
+function ProjectImage({
   url,
+  image,
+  title,
+  size,
   isOpen,
-}: Project & { isOpen: boolean }) {
-  if (!isOpen) {
-    return (
-      <>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
-          className="group flex cursor-pointer items-center gap-4 rounded-2xl md:hidden"
-        >
-          <div className="relative size-[80px] shrink-0 transition-all duration-100 group-hover:scale-[0.8]">
-            <Image
-              src={image}
-              alt={title}
-              width={80}
-              height={80}
-              className="aspect-square size-[80px] rounded-2xl object-cover"
-            />
-            <div className="absolute inset-0 rounded-2xl bg-black/15" />
-          </div>
-          <div className="flex flex-col select-none">
-            <h3 className="text-sm font-medium">{title}</h3>
-            <p className="text-muted-foreground text-xs">{description}</p>
-          </div>
-        </a>
+}: {
+  url?: string;
+  image: string;
+  title: string;
+  size: number;
+  isOpen: boolean;
+}) {
+  const img = (
+    <div className={`relative size-[${size}px] shrink-0`}>
+      <Image
+        src={image}
+        alt={title}
+        width={size}
+        height={size}
+        className={`aspect-square size-[${size}px] rounded-2xl object-cover shadow`}
+      />
+      <div className="absolute inset-0 rounded-2xl bg-black/15" />
+    </div>
+  );
 
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
-          className="relative hidden md:block"
-        >
-          <Image
-            src={image}
-            alt={title}
-            width={110}
-            height={110}
-            className="aspect-square rounded-2xl object-cover shadow"
-          />
-          <div className="absolute inset-0 rounded-2xl bg-black/15" />
-        </a>
-      </>
-    );
-  }
+  if (!url || !isOpen) return img;
 
   return (
     <a
@@ -142,22 +151,64 @@ function ProjectItem({
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => e.stopPropagation()}
-      className="group flex cursor-pointer items-center gap-4 rounded-2xl"
+      className="group shrink-0 transition-all duration-100 hover:scale-[0.9]"
+      aria-label={`Open ${title}`}
     >
-      <div className="relative size-[80px] shrink-0 transition-all duration-100 group-hover:scale-[0.8]">
-        <Image
-          src={image}
-          alt={title}
-          width={80}
-          height={80}
-          className="aspect-square size-[80px] rounded-2xl object-cover"
-        />
-        <div className="absolute inset-0 rounded-2xl bg-black/15" />
-      </div>
-      <div className="flex flex-col select-none">
-        <h3 className="text-sm font-medium">{title}</h3>
-        <p className="text-muted-foreground text-xs">{description}</p>
-      </div>
+      {img}
     </a>
+  );
+}
+
+function ProjectItem({
+  title,
+  description,
+  image,
+  url,
+  isOpen,
+}: Project & { isOpen: boolean }) {
+  return (
+    <>
+      {/* Mobile: always show full layout */}
+      <div className="flex items-center gap-4 rounded-2xl md:hidden">
+        <ProjectImage
+          url={url}
+          image={image}
+          title={title}
+          size={80}
+          isOpen={isOpen}
+        />
+        <div className="flex flex-col select-none">
+          <h3 className="text-sm font-medium">{title}</h3>
+          <p className="text-muted-foreground text-xs">{description}</p>
+        </div>
+      </div>
+
+      {/* Desktop: image only when collapsed, full layout when open */}
+      <div className="hidden md:block">
+        {isOpen ? (
+          <div className="flex items-center gap-4 rounded-2xl">
+            <ProjectImage
+              url={url}
+              image={image}
+              title={title}
+              size={80}
+              isOpen={isOpen}
+            />
+            <div className="flex flex-col select-none">
+              <h3 className="text-sm font-medium">{title}</h3>
+              <p className="text-muted-foreground text-xs">{description}</p>
+            </div>
+          </div>
+        ) : (
+          <ProjectImage
+            url={url}
+            image={image}
+            title={title}
+            size={110}
+            isOpen={isOpen}
+          />
+        )}
+      </div>
+    </>
   );
 }
