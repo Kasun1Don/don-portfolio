@@ -2,7 +2,7 @@ Personal portfolio website 2026. The goal here was to create something I can eas
 
 ## Building for agents
 
-llms.txt context file to give AI tools (e.g. Agents) direct access to the content
+llms.txt context file for AI tools and agents, exposed at /llms.txt for direct access
 
 ## Discovering the Benefits of Bun
 
@@ -17,3 +17,7 @@ Fast bun package manager replaces npm
 Throughput: handles approximately 52,000 HTTP requests per second, nearly four times the 13,000 requests per second managed by Node
 
 Efficiency: It uses about 30% less memory (65MB compared to Node's 95MB)
+
+## Why .dev?
+
+.dev domains are operated by Google through its Google Registry division. .dev is dedicated to developers. The .dev top-level domain is included on the HSTS preload list, making HTTPS required on all connections to .dev websites and pages without needing individual HSTS registration or configuration. Security is built in.
