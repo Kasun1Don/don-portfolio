@@ -48,9 +48,9 @@ const projects: Project[] = [
     image: "/neopoker.png",
   },
   {
-    title: "OpenClaw",
+    title: "OpenClaw & Hermes Agent",
     description:
-      "Built an agent orchestrator to automate daily tasks and act as a personal assistant, running on a dedicated MacBook with SSH access from my main machine.",
+      "Built a multi-agent routing system with OpenClaw and used Hermes Agent to automate daily tasks (personal assistant). The agents run on a dedicated Mac mini with SSH and VNC access from my main machine through a Tailscale tailnet. They have Telegram messaging setup and Hermes is connected to AgentMail so it can sign up for new accounts and manage them with its own email inbox.",
     image: "/openclaw_proj.png",
   },
   {
