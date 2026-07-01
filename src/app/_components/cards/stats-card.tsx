@@ -22,6 +22,12 @@ const stats = [
     label: "Tokens used in 2025 (Cursor)",
     description: "AI assisted development for production applications",
   },
+  {
+    value: "Open source",
+    label: "Hermes + OpenClaw",
+    description:
+      "Contributing to agent tooling for enterprise workflows (gateway)",
+  },
 ];
 
 export function StatsCard() {
