@@ -20,9 +20,6 @@ const badges = [
   "Crypto Exchange Developer (10k+ users)",
 ];
 
-const profileLinkClassName =
-  "text-foreground underline underline-offset-2 transition-opacity hover:opacity-80";
-
 export function ProfileCard() {
   return (
     <>
@@ -69,28 +66,20 @@ export function ProfileCard() {
             </div>
             <div className="text-muted-foreground space-y-2 text-sm">
               <p>
-                I&apos;m an Australian-born full-stack AI software engineer
+                I&apos;m an Australian born full stack AI software engineer
                 passionate about building performant production software that
                 scales. Previously, I worked on Hashlock AI, building Mastra
                 workflows to analyze, audit, score findings, and support
-                evaluation pipelines. I enjoy working in lean, fast-paced teams
-                with full-stack ownership and high agency over what gets
-                shipped.
+                evaluation pipelines. I enjoy working in lean teams that move
+                quickly, with full stack ownership and high agency over what
+                gets shipped.
               </p>
               <p>
                 I focus on user experience and, increasingly, agent experience
                 when shipping new features. I also think about optimizing
-                developer experience as AI-native workflows evolve. I contribute
-                to open source, including a{" "}
-                <Link
-                  href="https://github.com/NousResearch/hermes-agent/pull/56045"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={profileLinkClassName}
-                >
-                  Telegram group onboarding pull request for Hermes Agent
-                </Link>
-                .
+                developer experience as AI native workflows evolve. I enjoy
+                contributing to open source software such as Hermes Agent (Nous
+                Research) based on limitations for enterprise applications.
               </p>
               <p className="hidden md:block">
                 I enjoy embracing and experimenting with new AI tools, then

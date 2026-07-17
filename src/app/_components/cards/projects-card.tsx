@@ -23,9 +23,9 @@ const PROJECT_IMAGE_SIZE = {
 
 const projects: Project[] = [
   {
-    title: "NGU AI",
+    title: "NGU Real Estate Group",
     description:
-      "Full-stack AI software development using Mastra and Inngest, including practical workflow demonstrations for business owners at One Life Club.",
+      "Full stack AI software development using Mastra and Inngest to replace and improve existing business software and processes. Demonstrating the powerful economic impact of implementing AI solutions and custom software in the business to other business owners at One Life Club (subsidiary). Deploying and maintaining a fleet of Hermes Agents on Mac Minis for 17 real estate offices. ",
     image: "/ngu-ai.webp",
     url: "https://github.com/NGU-AI",
   },

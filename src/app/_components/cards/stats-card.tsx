@@ -26,7 +26,7 @@ const stats = [
     value: "Open source",
     label: "Hermes Agent",
     description:
-      "Telegram onboarding PR refined after cofounder feedback, with 63 targeted tests passing",
+      "Telegram onboarding PR (positive feedback from co-founder Teknium)",
   },
 ];
 

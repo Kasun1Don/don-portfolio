@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     companyUrl: "https://github.com/NGU-AI",
     title: "Full Stack AI Software Engineer",
     description:
-      "Building full-stack AI products and agentic workflows using Mastra and Inngest.",
+      "Building full stack AI products and agentic workflows using Mastra and Inngest. Hermes Agent fleet deployment and maintenance for 17 real estate offices.",
   },
   {
     company: "Labrys",

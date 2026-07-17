@@ -25,6 +25,11 @@ Before writing or modifying any code, use a subagent to read /references.md
 and return only the rules and examples relevant to the current task. Apply those patterns
 to your implementation.
 
+## Writing style
+
+- Keep user-facing copy natural and direct. Avoid stylistic em dashes and unnecessary hyphenated phrasing because they can read as AI generated. Prefer short sentences, commas, colons, or conjunctions.
+- Preserve punctuation required by standard grammar. Do not alter code syntax, identifiers, paths, URLs, CLI flags, or data values to satisfy this writing rule.
+
 ## Project Structure Tree
 
 ```
