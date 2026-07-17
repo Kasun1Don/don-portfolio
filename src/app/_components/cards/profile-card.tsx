@@ -15,10 +15,13 @@ import {
 } from "@/components/ui/tooltip";
 
 const badges = [
-  "Full Stack",
+  "Full Stack AI",
   "AI Product Developer (10k+ users)",
   "Crypto Exchange Developer (10k+ users)",
 ];
+
+const profileLinkClassName =
+  "text-foreground underline underline-offset-2 transition-opacity hover:opacity-80";
 
 export function ProfileCard() {
   return (
@@ -49,7 +52,7 @@ export function ProfileCard() {
                 Kasun L. Don
               </h1>
               <h2 className="text-muted-foreground text-center text-lg font-bold md:text-left">
-                Software Engineer
+                Full Stack AI Software Engineer
               </h2>
             </div>
             <div className="flex flex-wrap gap-1.5">
@@ -66,28 +69,42 @@ export function ProfileCard() {
             </div>
             <div className="text-muted-foreground space-y-2 text-sm">
               <p>
-                I&apos;m an Australian born software engineer passionate about
-                building performant production software that scales. Most
-                recently, I worked on Hashlock AI, building Mastra workflows to
-                analyze, audit, score findings and support evaluation pipelines.
-                I enjoy working in a lean, fast paced team with full stack
-                ownership and high agency over what gets shipped.
+                I&apos;m an Australian-born full-stack AI software engineer
+                passionate about building performant production software that
+                scales. Previously, I worked on Hashlock AI, building Mastra
+                workflows to analyze, audit, score findings, and support
+                evaluation pipelines. I enjoy working in lean, fast-paced teams
+                with full-stack ownership and high agency over what gets
+                shipped.
               </p>
               <p>
-                I value focusing on user experience and increasingly agent
-                experience when shipping new features. I also thinking more
-                about optimising our developer experience as our AI native
-                workflows evolve.
+                I focus on user experience and, increasingly, agent experience
+                when shipping new features. I also think about optimizing
+                developer experience as AI-native workflows evolve. I contribute
+                to open source, including a{" "}
+                <Link
+                  href="https://github.com/NousResearch/hermes-agent/pull/56045"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={profileLinkClassName}
+                >
+                  Telegram group onboarding pull request for Hermes Agent
+                </Link>
+                .
               </p>
               <p className="hidden md:block">
-                Love embracing new AI tools, experimenting with them and sharing
-                what I learn with colleagues and the broader developer community
-                through meetups etc.
+                I enjoy embracing and experimenting with new AI tools, then
+                sharing what I learn with colleagues and the broader developer
+                community through meetups.
               </p>
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               <Button variant="outline" asChild>
-                <Link href="https://github.com/Kasun1Don" target="_blank">
+                <Link
+                  href="https://github.com/Kasun1Don"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <GitHubLight size={16} />
                   GitHub
                 </Link>
@@ -96,6 +113,7 @@ export function ProfileCard() {
                 <Link
                   href="https://www.linkedin.com/in/kasun-ldon/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <LinkedIn size={16} />
                   LinkedIn

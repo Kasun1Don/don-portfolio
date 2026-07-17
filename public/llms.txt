@@ -1,25 +1,24 @@
-# Kasun L. Don Software Engineering Portfolio
+# Kasun L. Don Full Stack AI Software Engineering Portfolio
 
-> Portfolio website for Kasun L. Don (Don), a Full stack software engineer with experience building production AI and Web3 applications that have scaled to thousands of users. 
+> Portfolio website for Kasun L. Don (Don), a Full Stack AI Software Engineer at NGU AI who builds production AI software and demonstrates practical AI workflows to business owners.
 
 ## About
 
-Kasun L. Don is a full stack software engineer passionate about building performant production software that scales. He most recently worked on Hashlock AI, building Mastra workflows to analyze, audit, score findings and support evaluation pipelines. He enjoys working in lean, fast-paced teams with full stack ownership and high agency over what gets shipped.
+Kasun L. Don is an Australian-born Full Stack AI Software Engineer building AI software with Mastra and Inngest at NGU AI. He also demonstrates practical, mind-blowing AI workflows to business owners at One Life Club, showing how they can apply AI inside real businesses.
 
-He values focusing on user experience and increasingly agent experience when shipping new features. He also thinks about optimising developer experience as AI native workflows evolve.
-
-He embraces new AI tools, experiments with them and shares what he learns with colleagues and the broader developer community through meetups etc.
+He also contributes to Hermes Agent. On his Telegram group onboarding pull request, Hermes cofounder Teknium recognized a real onboarding gap and asked him to clarify authorization paths and test production registration. Kasun addressed both points, with all 63 targeted Telegram tests passing.
 
 ## Skills
 
 - Languages: JavaScript, TypeScript, HTML, CSS
-- Frameworks: React, Next.js, Node.js, Tailwind CSS, tRPC, Bun, Zod, Vitest
+- Frameworks: React, Next.js, Node.js, Tailwind CSS, tRPC, Bun, Zod, Vitest, Inngest
 - Databases: MongoDB, PostgreSQL
 - DevOps: Git, GitHub, Docker, Serverless
 - AI: Mastra AI workflows, Claude AI, OpenAI
 
 ## Experience
 
+- Full Stack AI Software Engineer at NGU AI — Building full-stack AI products and agentic workflows using Mastra and Inngest
 - Full Stack Software Engineer at Labrys — Built production AI and Web3 applications at Australia's largest blockchain development agency
 - Contract Software Engineer — Supported engineering delivery for a decentralized crypto exchange
 - Intern Software Developer at Labrys — Competed with 5 interns and landed a permanent role
@@ -28,9 +27,10 @@ He embraces new AI tools, experiments with them and shares what he learns with c
 
 ## Projects
 
+- NGU AI: Full-stack AI software development using Mastra and Inngest, including practical workflow demonstrations for business owners at One Life Club.
 - NeoPoker: NeoPoker is an early stage AI agent poker platform inspired by Moltbook, designed to let users bring their own agents to compete in poker matches. Beyond gameplay, it explores poker as a benchmark for comparing model performance in strategic, adversarial environments.
 - Hashlock AI Audit: Worked on Hashlock AI, building multi step AI audit pipelines for smart contract analysis. Developed Mastra workflows to orchestrate agent and tool execution, analyze and score findings, support evaluation pipelines, and enable runtime LLM provider switching via an admin dashboard. Two developer team with product manager and designer.
-- OpenClaw: Ongoing build of a multi-agent routing system with OpenClaw and Hermes Agent to automate daily tasks and act as a personal assistant. The agents run on a dedicated Mac mini with SSH and VNC access from my main machine through a Tailscale tailnet, with Telegram messaging setup and Hermes connected to AgentMail for account signups and email management.
+- OpenClaw and Hermes Agent: Contributed a Telegram group onboarding notice to Hermes Agent. After feedback from Hermes cofounder Teknium, clarified sender and group authorization and added production registration coverage; all 63 targeted Telegram tests pass. Also runs a personal OpenClaw and Hermes setup on a dedicated Mac mini.
 - PumpTask: pump.task is a modern open source task management platform inspired by Trello, combining collaborative kanban board based workflows with Web3 native reward mechanics. This project explores rewarding completed and verified tasks with incentives such as USDC and NFTs.
 - Hika Design: A professional services website for Hika Design Services Pty Ltd, an overhead power line engineering consultancy. Built with Next.js, React, Typescript, Tailwind and Resend for email, deployed on Vercel.
 - FightTrack: FightTrack is a MERN full stack boxing gym management platform. It streamlines class booking, schedules, memberships, payments, and admin workflows for both members and gym owners. Demo deployment is currently live for South Side Boxing Gym.
@@ -43,3 +43,6 @@ He embraces new AI tools, experiments with them and shares what he learns with c
 
 - GitHub: https://github.com/Kasun1Don
 - LinkedIn: https://www.linkedin.com/in/kasun-ldon/
+- NGU AI: https://github.com/NGU-AI
+- One Life Club: https://onelifeclub.com/
+- Hermes Agent pull request: https://github.com/NousResearch/hermes-agent/pull/56045

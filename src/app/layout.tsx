@@ -12,12 +12,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Kasun L. Don",
-  description: "Kasun L. Don AI software engineer portfolio.",
+  title: "Kasun L. Don | Full Stack AI Software Engineer",
+  description:
+    "Kasun L. Don, Full Stack AI Software Engineer at NGU AI, building AI software with Mastra and Inngest.",
   metadataBase: new URL("https://t0ken.dev"),
   openGraph: {
-    title: "Kasun L. Don Portfolio",
-    description: "Kasun L. Don AI software engineering portfolio.",
+    title: "Kasun L. Don | Full Stack AI Software Engineer",
+    description:
+      "Kasun L. Don, Full Stack AI Software Engineer at NGU AI, building AI software with Mastra and Inngest.",
     type: "website",
   },
 };
@@ -26,8 +28,14 @@ const jsonLd: WithContext<Person> = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Kasun L. Don",
-  jobTitle: "Full Stack Software Engineer",
-  description: "Kasun L. Don AI software engineer portfolio.",
+  jobTitle: "Full Stack AI Software Engineer",
+  description:
+    "Full Stack AI Software Engineer at NGU AI, building AI software with Mastra and Inngest.",
+  worksFor: {
+    "@type": "Organization",
+    name: "NGU AI",
+    url: "https://github.com/NGU-AI",
+  },
   sameAs: [
     "https://github.com/Kasun1Don",
     "https://www.linkedin.com/in/kasun-ldon/",
@@ -40,6 +48,8 @@ const jsonLd: WithContext<Person> = {
     "Node.js",
     "AI Workflows",
     "Mastra AI",
+    "Inngest",
+    "Hermes Agent",
     "tRPC",
     "Web3",
     "Blockchain",

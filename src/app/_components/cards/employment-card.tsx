@@ -9,11 +9,19 @@ import { cn } from "@/lib/utils";
 
 interface Experience {
   company: string;
+  companyUrl?: string;
   title: string;
   description: string;
 }
 
 const experiences: Experience[] = [
+  {
+    company: "NGU AI",
+    companyUrl: "https://github.com/NGU-AI",
+    title: "Full Stack AI Software Engineer",
+    description:
+      "Building full-stack AI products and agentic workflows using Mastra and Inngest.",
+  },
   {
     company: "Labrys",
     title: "Full Stack Software Engineer",
@@ -69,6 +77,7 @@ export function EmploymentCard() {
 
 function ExperienceItem({
   company,
+  companyUrl,
   title,
   description,
   isLast,
@@ -78,7 +87,21 @@ function ExperienceItem({
   return (
     <TimelineItem isLast={isLast}>
       <p className="text-sm leading-tight font-medium">{title}</p>
-      <p className="text-muted-foreground text-xs">{company}</p>
+      <p className="text-muted-foreground text-xs">
+        {companyUrl ? (
+          <a
+            href={companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(event) => event.stopPropagation()}
+            className="hover:text-foreground underline underline-offset-2 transition-colors"
+          >
+            {company}
+          </a>
+        ) : (
+          company
+        )}
+      </p>
       <p
         className={cn("text-muted-foreground mt-1 text-xs", {
           "line-clamp-4": !isOpen,

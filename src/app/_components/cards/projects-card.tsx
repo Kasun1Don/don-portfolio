@@ -16,7 +16,19 @@ interface Project {
   url?: string;
 }
 
+const PROJECT_IMAGE_SIZE = {
+  expanded: 80,
+  collapsed: 110,
+};
+
 const projects: Project[] = [
+  {
+    title: "NGU AI",
+    description:
+      "Full-stack AI software development using Mastra and Inngest, including practical workflow demonstrations for business owners at One Life Club.",
+    image: "/ngu-ai.webp",
+    url: "https://github.com/NGU-AI",
+  },
   {
     title: "Hashlock AI Audit",
     description: (
@@ -50,8 +62,9 @@ const projects: Project[] = [
   {
     title: "OpenClaw & Hermes Agent",
     description:
-      "Built a multi-agent routing system with OpenClaw and used Hermes Agent to automate daily tasks (personal assistant). The agents run on a dedicated Mac mini with SSH and VNC access from my main machine through a Tailscale tailnet. They have Telegram messaging setup and Hermes is connected to AgentMail so it can sign up for new accounts and manage them with its own email inbox.",
+      "Contributed a Telegram group onboarding notice to Hermes Agent that explains authorization and privacy setup when the bot joins a group. After feedback from Hermes cofounder Teknium, I clarified sender and group authorization and added production registration coverage; all 63 targeted Telegram tests pass. I also run a personal OpenClaw and Hermes setup on a dedicated Mac mini.",
     image: "/openclaw_proj.png",
+    url: "https://github.com/NousResearch/hermes-agent/pull/56045",
   },
   {
     title: "PumpTask",
@@ -122,30 +135,29 @@ function ProjectImage({
   image,
   title,
   size,
-  isOpen,
 }: {
   url?: string;
   image: string;
   title: string;
   size: number;
-  isOpen: boolean;
 }) {
   const img = (
     <div
-      className={`relative size-[${size}px] shrink-0 transition-all duration-100 group-hover:scale-[0.9]`}
+      className="relative shrink-0 transition-all duration-100 group-hover:scale-[0.9]"
+      style={{ width: size, height: size }}
     >
       <Image
         src={image}
         alt={title}
         width={size}
         height={size}
-        className={`aspect-square size-[${size}px] rounded-2xl object-cover shadow`}
+        className="size-full rounded-2xl object-cover shadow"
       />
       <div className="absolute inset-0 rounded-2xl bg-black/15" />
     </div>
   );
 
-  if (!url || !isOpen) return img;
+  if (!url) return img;
 
   return (
     <a
@@ -186,8 +198,7 @@ function ProjectItem({
           url={url}
           image={image}
           title={title}
-          size={80}
-          isOpen={isOpen}
+          size={PROJECT_IMAGE_SIZE.expanded}
         />
         <div className="flex flex-col select-none">
           <h3 className="text-sm font-medium">{title}</h3>
@@ -209,8 +220,7 @@ function ProjectItem({
               url={url}
               image={image}
               title={title}
-              size={80}
-              isOpen={isOpen}
+              size={PROJECT_IMAGE_SIZE.expanded}
             />
             <div className="flex flex-col select-none">
               <h3 className="text-sm font-medium">{title}</h3>
@@ -223,8 +233,7 @@ function ProjectItem({
               url={url}
               image={image}
               title={title}
-              size={110}
-              isOpen={isOpen}
+              size={PROJECT_IMAGE_SIZE.collapsed}
             />
           </div>
         )}

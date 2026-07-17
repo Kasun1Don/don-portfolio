@@ -24,9 +24,9 @@ const stats = [
   },
   {
     value: "Open source",
-    label: "Hermes + OpenClaw",
+    label: "Hermes Agent",
     description:
-      "Contributing to agent tooling for enterprise workflows (gateway)",
+      "Telegram onboarding PR refined after cofounder feedback, with 63 targeted tests passing",
   },
 ];
 
